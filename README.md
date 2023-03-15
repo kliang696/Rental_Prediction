@@ -134,6 +134,9 @@ The main metrics used to evaluate the model performance were Mae, Mse, Rmse, and
 <img width="450" alt="Screen Shot 2023-03-12 at 22 16 58" src="https://user-images.githubusercontent.com/89816441/224593008-711cb0f8-4e73-41a8-a3b3-13e43ab2ba41.png">
 
 ## Data Analytics and Dashboard with Tableau
+- After identifying the most important features, we have develop a dashboard and analyze the price for each important feature in Tableau
+<img width="1559" alt="Screen Shot 2023-03-14 at 22 05 35" src="https://user-images.githubusercontent.com/89816441/225186018-d3770ce8-06fe-44ab-b8b7-cfe11159719f.png">
+
 
 ## Web App and Deployment
 Developed Web App with a user-friendly interface on the Streamlit and powered by Catboost Model, providing accurate predictions for rental values of houses. This app provides real-time predictions with Shap force plot explanations for single value inputs, and supports big data input for detailed EDA and batch prediction. 
