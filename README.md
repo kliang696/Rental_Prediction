@@ -160,6 +160,17 @@ Developed Web App with a user-friendly interface on the ```Streamlit``` and powe
 
 ## Conclusion
 
+- Location is crucial in determining rental prices, as longitude (long) and latitude (lat) are the most important features in the model.
+Property characteristics such as square footage (sqfeet), number of bedrooms (bed), and number of bathrooms (baths) have a direct impact on rental prices. Higher values for these features lead to higher rental prices, and lower values result in lower rental prices.
+- Rental prices in California (state_ca), Florida (state_fl), and Colorado (state_co) are higher compared to other states, indicating these states have the highest rental prices.
+- Certain amenities and property features, such as having an apartment, in-unit laundry (laundry options w/d in unit), an attached garage, - and a non-smoking policy, are associated with higher rental prices.
+- In terms of model performance, Catboost initially outperformed Lgbm and Linear Regression with an `R^2 score` of 0.88. However, after hyperparameter tuning, the `Lgbm` model emerged as the best performing model, achieving an `R^2 score` of 0.90.
+
+__Furthur Improvement__:
+- Feature Engineering: Additional relevant features could be derived from the existing data or external data sources, such as proximity to public transportation, school districts, crime rates, or median income levels of the neighborhood. These new features might provide more insights into the factors influencing rental prices.
+- More Data: Gathering more data points or updating the dataset with recent rental prices could help improve the model's performance, as it will better capture market trends and changes.
+
+
 
 
 
