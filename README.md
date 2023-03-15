@@ -17,7 +17,7 @@ The dataset used for predicting rental house prices is sourced from Craigslist, 
 - [Exploratory Data Analysis](#exploratory-data-analysis-and-feature-engineering)
 - [Modelling Evaluation & Improvement](#modelling-evaluation-and-improvement)  
 - [Feature Importance](#feature-importance) 
-- [Data Analytics & Dashboard with Tableau](#data-analytics-and-dashboard-with-Tableau)
+- [Data Analytics & Dashboard with Tableau](#data-analytics-and-dashboard-with-tableau)
 - [Build Web App and deployment with Streamlit](#web-app-and-deployment)
 - [Conclusion](#conclusion)
 
@@ -98,15 +98,19 @@ cat= ['region', 'type', 'laundry_options', 'parking_options', 'state']
 df_encoded = pd.get_dummies(df, columns=cat)
 ```
 ## Modelling Evaluation and Improvement
-The main metrics used to evaluate the model performance were Mae, Mse, Rmse, and R2. The table below clearly indicates that Catboost performed  better than both Lgbm and Linear regression with R^2 score of 0.88. After Hyper-parameter tunning, Lgbm outperformed the catboost and linear regression with R^2 score of 0.90.
+The main metrics used to evaluate the model performance were ```MAE, MSE, Rmse, and R^2```. The table below clearly indicates that ```Catboost``` performed  better than both ```Lgbm and Linear regression``` with ```R^2``` score of 0.88. After Hyper-parameter tunning, ```Lgbm``` outperformed the ```catboost``` and ```linear regression``` with ```R^2``` score of 0.90.
 <table><tr>
 <tr> - Before Hyper-parameter tunning:
 <tr><img width="539" alt="Screen Shot 2023-03-11 at 23 41 21" src="https://user-images.githubusercontent.com/89816441/224524788-4e1df892-baf8-4b80-856a-ea64181d24d7.png">
 <tr> - After Hyper-parameter tunning:
 <tr><img width="539" alt="Screen Shot 2023-03-11 at 23 41 52" src="https://user-images.githubusercontent.com/89816441/224524808-5d88b16d-b465-4f89-8859-44f46e8b83d2.png">
+<tr> - Scatter Plot for Predicted price Vs.Actual Price
+<tr><img width="450" alt="Screen Shot 2023-03-14 at 22 24 12" src="https://user-images.githubusercontent.com/89816441/225188526-99b0ef4a-71df-4c93-a8ff-39a40b8f65b2.png">
+
+
 </tr></table>
 
--  Based on the hyperparameter importance plot, we observe that the learning rate has the highest importance value of 0.79. Furthermore, it appears that the model's performed best when the learning rate is in the range of 0.1 to 0.2.
+-  Based on the hyperparameter importance plot from ```Optuna```, we observe that the ```learning rate``` has the highest importance value of 0.79. Furthermore, it appears that the model's performed best when the ```learning rate``` is in the range of 0.1 to 0.2.
 
 <table><tr>
 <tr><img width="600" alt="Screen Shot 2023-03-13 at 01 53 14" src="https://user-images.githubusercontent.com/89816441/224618827-d426c733-c468-4d80-bae7-70f6164ae70c.png">
@@ -139,7 +143,7 @@ The main metrics used to evaluate the model performance were Mae, Mse, Rmse, and
 
 
 ## Web App and Deployment
-Developed Web App with a user-friendly interface on the Streamlit and powered by Catboost Model, providing accurate predictions for rental values of houses. This app provides real-time predictions with Shap force plot explanations for single value inputs, and supports big data input for detailed EDA and batch prediction. 
+Developed Web App with a user-friendly interface on the ```Streamlit``` and powered by ```Catboost``` Model, providing accurate predictions for rental values of houses. This app provides real-time predictions with ```Shap force plot``` explanations for single value inputs, and supports big data input for detailed EDA and batch prediction. 
 -  Real Time Prediction
 <table><tr>
 <td><img width="500" alt="Screen Shot 2023-03-12 at 22 50 48" src="https://user-images.githubusercontent.com/89816441/224597216-b164f6c3-aa60-4be9-8034-d7c1ee969031.png">
