@@ -102,12 +102,18 @@ df_encoded = pd.get_dummies(df, columns=cat)
 ## Modelling Evaluation and Improvement
 The main metrics used to evaluate the model performance were ```MAE, MSE, Rmse, and R^2```. The table below clearly indicates that ```Catboost``` performed  better than both ```Lgbm and Linear regression``` with ```R^2``` score of 0.88. After Hyper-parameter tunning, ```Lgbm``` outperformed the ```catboost``` and ```linear regression``` with ```R^2``` score of 0.90.
 <table><tr>
-<tr> - Before Hyper-parameter tunning:
 <tr><img width="539" alt="Screen Shot 2023-03-11 at 23 41 21" src="https://user-images.githubusercontent.com/89816441/224524788-4e1df892-baf8-4b80-856a-ea64181d24d7.png">
-<tr> - After Hyper-parameter tunning:
-<tr><img width="539" alt="Screen Shot 2023-03-11 at 23 41 52" src="https://user-images.githubusercontent.com/89816441/224524808-5d88b16d-b465-4f89-8859-44f46e8b83d2.png">
-<tr> - Scatter Plot for Predicted price Vs.Actual Price
+
+<tr> - Below is the Scatter Plot for Predicted price (X-axis) Vs. Actual Price (Y-axis)
 <tr><img width="450" alt="Screen Shot 2023-03-14 at 22 24 12" src="https://user-images.githubusercontent.com/89816441/225188526-99b0ef4a-71df-4c93-a8ff-39a40b8f65b2.png">
+
+As you can see the model is doing a decent job in predicting the price compared to the actual values.
+
+## Improving Performance by Hyper Parameter Tunning
+
+<tr> The result table above is showing the model performance of LGBM model before any hyper parameter tunning and the table below shows the LGBM model performance after hyper-parameter tunning:
+<tr><img width="539" alt="Screen Shot 2023-03-11 at 23 41 52" src="https://user-images.githubusercontent.com/89816441/224524808-5d88b16d-b465-4f89-8859-44f46e8b83d2.png">
+
 
 
 </tr></table>
